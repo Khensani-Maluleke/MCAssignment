@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome TO Moble Counselling"
+        android:text="Welcome TO Mobile Counselling"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,18 +24,18 @@
         android:id="@+id/CounsellorBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="100dp"
         android:text="Counsellor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/ConsulterBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="44dp"
         android:text="Consulter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CounsellorBTN" />
@@ -44,8 +44,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="40dp"
         android:text="WE CARE ABOUT YOUR WELL-BEING"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
