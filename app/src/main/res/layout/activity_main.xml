@@ -24,8 +24,8 @@
         android:id="@+id/CounsellorBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="44dp"
         android:text="Counsellor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -34,8 +34,8 @@
         android:id="@+id/ConsulterBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="40dp"
         android:text="Consulter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CounsellorBTN" />
@@ -44,8 +44,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
         android:text="WE CARE ABOUT YOUR WELL-BEING"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

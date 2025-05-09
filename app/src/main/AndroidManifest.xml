@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MCPRO"
         tools:targetApi="31">
         <activity
+            android:name=".Consellorpage"
+            android:exported="false" />
+        <activity
+            android:name=".Consulterpage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

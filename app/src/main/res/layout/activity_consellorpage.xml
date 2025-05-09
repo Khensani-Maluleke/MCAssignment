@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consulterpage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="67dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <CheckBox
+            android:id="@+id/AnxietyID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anxiety" />
+
+        <CheckBox
+            android:id="@+id/AddictionID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Addiction" />
+
+        <CheckBox
+            android:id="@+id/AbuseID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abuse" />
+
+        <CheckBox
+            android:id="@+id/AcademicID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Academics"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="198dp" />
+
+        <CheckBox
+            android:id="@+id/DeprissionID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depression" />
+
+        <CheckBox
+            android:id="@+id/GeneralID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General" />
+
+        <CheckBox
+            android:id="@+id/Grief_LossID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grief Loss" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="52dp"
+        android:text="What Do You Offer?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
