@@ -11,38 +11,32 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    Button councellorbtn;
-    Button counsulterbtn;
+public class SignInSignUpPAGE extends AppCompatActivity {
+    Button signup;
+    Button signin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_in_sign_up_page);
 
-        //FINDING ID
-        councellorbtn=findViewById(R.id.CounsellorBTN);
-        counsulterbtn=findViewById(R.id.ConsulterBTN);
+        signin=findViewById(R.id.btnsignin);
+        signup=findViewById(R.id.btnsignup);
 
-        counsulterbtn.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), Consulterpage.class);
-                startActivity(i);
+                Intent k=new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(k);
             }
         });
-        councellorbtn.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), Consellorpage.class);
-                startActivity(i);
-
-
+                Intent k=new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(k);
             }
         });
-
-
-
-
+        
     }
 }

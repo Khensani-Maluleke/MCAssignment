@@ -13,13 +13,10 @@
         android:theme="@style/Theme.MCPRO"
         tools:targetApi="31">
         <activity
-            android:name=".Consellorpage"
+            android:name=".SignUpForm"
             android:exported="false" />
         <activity
-            android:name=".Consulterpage"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SignInSignUpPAGE"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +24,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Consellorpage"
+            android:exported="false" />
+        <activity
+            android:name=".Consulterpage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"></activity>
     </application>
 
 </manifest>
