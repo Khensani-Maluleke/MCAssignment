@@ -13,9 +13,6 @@
         android:theme="@style/Theme.MCPRO"
         tools:targetApi="31">
         <activity
-            android:name=".signup_or_signin"
-            android:exported="false" />
-        <activity
             android:name=".SignUpForm"
             android:exported="false" />
         <activity

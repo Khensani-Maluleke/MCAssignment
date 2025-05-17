@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup_or_signin">
+    tools:context=".SignInSignUpPAGE">
 
     <EditText
         android:id="@+id/editTextText"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/BtnLogin"
         android:layout_width="400dp"
         android:layout_height="58dp"
         android:layout_marginStart="137dp"
@@ -33,14 +33,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editPassword"/>
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editPassword"
         android:layout_width="wrap_content"
         android:layout_height="58dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -48,27 +48,26 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/BtnSignUp"
         android:layout_width="400dp"
         android:layout_height="58dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="156dp"
-        android:text="SingUp"
+        android:text="SignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/BtnLogin" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="230dp"
-        android:text="MMMK"
+        android:layout_marginTop="104dp"
+        android:text="YOUR LIFE MATTERS!!!"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
