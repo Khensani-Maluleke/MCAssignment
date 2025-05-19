@@ -1,6 +1,9 @@
 package com.example.mcpro;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 
@@ -14,6 +17,8 @@ public class Consellorpage extends AppCompatActivity {
     CheckBox Academics;
     CheckBox Depression;
     CheckBox General;
+    Button sub;
+
 
 
     @Override
@@ -28,6 +33,7 @@ public class Consellorpage extends AppCompatActivity {
         Academics=findViewById(R.id.AcademicID);
         Depression=findViewById(R.id.DeprissionID);
         General=findViewById(R.id.GeneralID);
+        sub=findViewById(R.id.consellorsubbtn);
         //CHECKING STATE
         Boolean checkAnxiety=Anxiety.isChecked();
         Boolean checkAddiction=Addiction.isChecked();
@@ -35,5 +41,13 @@ public class Consellorpage extends AppCompatActivity {
         Boolean checkAcademicsState=Academics.isChecked();
         Boolean checkDepressionState=Depression.isChecked();
         Boolean checkAnxietyState=Anxiety.isChecked();
+
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

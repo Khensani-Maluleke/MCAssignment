@@ -1,6 +1,9 @@
 package com.example.mcpro;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 
@@ -14,6 +17,7 @@ public class Consulterpage extends AppCompatActivity {
     RadioButton Academics;
     RadioButton Depression;
     RadioButton General;
+    Button subb;
 
 
     @Override
@@ -28,6 +32,7 @@ public class Consulterpage extends AppCompatActivity {
         Academics=findViewById(R.id.radioAcademics);
         Depression=findViewById(R.id.radioDepression);
         General=findViewById(R.id.GeneralID);
+        subb=findViewById(R.id.counsultersubbtn);
         //CHECKING STATE
         Boolean checkAnxiety=Anxiety.isChecked();
         Boolean checkAddiction=Addiction.isChecked();
@@ -35,5 +40,12 @@ public class Consulterpage extends AppCompatActivity {
         Boolean checkAcademicsState=Academics.isChecked();
         Boolean checkDepressionState=Depression.isChecked();
         Boolean checkAnxietyState=Anxiety.isChecked();
+        subb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
