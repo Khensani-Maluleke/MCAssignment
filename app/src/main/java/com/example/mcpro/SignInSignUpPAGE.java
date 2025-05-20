@@ -55,7 +55,6 @@
 //}}
 
 package com.example.mcpro;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -64,7 +63,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -96,7 +101,7 @@ public class SignInSignUpPAGE extends AppCompatActivity {
         user = findViewById(R.id.usernametext);
         pass = findViewById(R.id.passwordtext);
 
-        sign_up.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = user.getText().toString().trim();
@@ -110,11 +115,11 @@ public class SignInSignUpPAGE extends AppCompatActivity {
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
+        sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Directly go to MainActivity (you can implement actual login logic here)
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), SignUpPage.class);
                 startActivity(i);
             }
         });
