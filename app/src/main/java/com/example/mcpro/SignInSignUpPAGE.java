@@ -88,7 +88,7 @@ public class SignInSignUpPAGE extends AppCompatActivity {
     EditText user;
 
     // Your PHP endpoint
-    String serverURL = "https://lamp.ms.wits.ac.za/home/s2815983/signup.php";
+    String serverURL = "https://lamp.ms.wits.ac.za/home/s2815983/userSignin.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,8 +123,6 @@ public class SignInSignUpPAGE extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
     }
 
     private void registerUser(String username, String password) {

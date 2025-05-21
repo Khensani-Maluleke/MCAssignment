@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MCPRO"
         tools:targetApi="31">
         <activity
+            android:name=".NewSignUpPage"
+            android:exported="false" />
+        <activity
             android:name=".SignUpPage"
             android:exported="false" />
         <activity
