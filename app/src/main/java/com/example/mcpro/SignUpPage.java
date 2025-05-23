@@ -25,14 +25,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-
 public class SignUpPage extends AppCompatActivity {
     String serverURL = "https://lamp.ms.wits.ac.za/home/s2815983/userSignup.php";
     EditText username;
