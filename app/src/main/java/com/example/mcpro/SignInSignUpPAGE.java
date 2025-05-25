@@ -13,6 +13,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -21,13 +26,16 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignInSignUpPAGE extends AppCompatActivity {
-
     Button sign_up;
     Button login;
+    Button resetBtn;
     EditText pass;
     EditText user;
+    EditText mail;
 
     // Your PHP endpoint
     String serverURL = "https://lamp.ms.wits.ac.za/home/s2815983/userSignin.php";
@@ -42,6 +50,8 @@ public class SignInSignUpPAGE extends AppCompatActivity {
         login = findViewById(R.id.BtnLogin);
         user = findViewById(R.id.usernametext);
         pass = findViewById(R.id.passwordtext);
+        mail=findViewById(R.id.emailedittext);
+        resetBtn = findViewById(R.id.resetButton);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +73,15 @@ public class SignInSignUpPAGE extends AppCompatActivity {
                 // Directly go to MainActivity (you can implement actual login logic here)
                 Intent i = new Intent(getApplicationContext(), SignUpPage.class);
                 startActivity(i);
+            }
+        });
+
+        resetBtn.setOnClickListener(v -> {
+            String email = mail.getText().toString().trim();
+            if (!email.isEmpty()) {
+                sendResetRequest(email);
+            } else {
+                Toast.makeText(this, "Please enter your email.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -125,5 +144,22 @@ public class SignInSignUpPAGE extends AppCompatActivity {
             }
         });
         thread.start();
+    }
+
+    private void sendResetRequest(String email) {
+        String URL = "https://lamp.ms.wits.ac.za/home/s2815983/request_password_reset.php";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        StringRequest request = new StringRequest(Request.Method.POST, URL,
+                response -> Toast.makeText(this, response, Toast.LENGTH_LONG).show(),
+                error -> Toast.makeText(this, "Something went wrong.", Toast.LENGTH_SHORT).show()
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("email", email);
+                return params;
+            }
+        };
+        queue.add(request);
     }
 }

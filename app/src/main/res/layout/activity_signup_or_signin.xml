@@ -21,7 +21,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:layout_height="180dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="22dp"
         android:orientation="vertical"
@@ -43,6 +43,15 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/emailedittext"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <Button
@@ -64,5 +73,15 @@
         android:text="SignUp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnLogin" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="39dp"
+        android:text="Reset Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
